@@ -1,28 +1,35 @@
 package dataStruct;
-
+/**
+ * 测试单链表
+ * @author admin
+ *
+ */
 public class TestLinkedList {
   public static void main(String[] args) {
 
     LinkedList linkedList = new LinkedList();
-    Operation operation = new Operation();
-    Node node1 = new Node("第一个节点");
-    Node node2 = new Node("第二个节点");
-    Node node3 = new Node("第三个节点");
-    Node node4 = new Node("第四个节点");
-    Node node5 = new Node("插入节点");
-    linkedList.addElement(node1);
-    linkedList.addElement(node2);
-    linkedList.addElement(node3);
-    linkedList.addElement(node4);
-    System.out.println(operation.judgeLoop2(linkedList));
-    /* System.out.println("插入之前--"+linkedList);
-       linkedList.insert(node5,1);
-    System.out.println("插入之后--"+linkedList);
-    //linkedList.deleteLastElement();
-    //System.out.println("删除最后节点后"+linkedList);   
-    linkedList.deleteElement(1);
-    System.out.println("删除指定节点后--"+linkedList);
-    System.out.println(linkedList.index(3).next);*/
-    
+    linkedList.addElement(new Node("结点一"));
+    linkedList.addElement(new Node("结点二"));
+    linkedList.addElement(new Node("结点三"));
+    System.out.println("单链表创建完毕");
+    printList(linkedList);
+    linkedList.insert(2, new Node("插入结点"));
+    System.out.println("指定结点插入完毕");
+    printList(linkedList);
+    linkedList.delete(2);
+    System.out.println("指定结点删除完毕");
+    printList(linkedList);
+    linkedList.removeLastElement();
+    System.out.println("末尾结点删除完毕");
+    printList(linkedList);
+  }
+  
+  public static void printList(LinkedList linkedList) {
+    System.out.print("["+linkedList.head.data+"]-->");
+    for(int i = 0;i < linkedList.length;i++)
+      if(i == linkedList.length-1)
+        System.out.println("["+linkedList.get(i).data+"]");
+      else
+        System.out.print("["+linkedList.get(i).data+"]-->");
   }
 }

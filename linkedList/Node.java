@@ -15,7 +15,6 @@ public class Node {
     return "Node [data=" + data +"]";
   }
 
-
   public void setNext(Node next) {
     this.next = next;
   }  

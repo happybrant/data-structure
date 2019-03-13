@@ -48,7 +48,6 @@ public class LinkedList implements List {
         lastNode = lastNode.next;
       }
       lastNode.next = null;
-      System.out.println(lastNode);
       length--;
     }
   }

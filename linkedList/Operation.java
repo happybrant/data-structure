@@ -1,5 +1,9 @@
 package dataStruct;
-
+/**
+ * 单链表的各种操作
+ * @author admin
+ *
+ */
 public class Operation {
 
   /**

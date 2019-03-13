@@ -1,5 +1,10 @@
 package dataStruct;
-
+/**
+ * 单循环链表实现游戏
+ * 游戏规则：N个人围成一个圈，从第一个人开始传花，当数到M时，该人退出游戏，直到剩下最后一个人。
+ * @author admin
+ *
+ */
 public class Game {
 
   LinkedList linkedList = new LinkedList();
